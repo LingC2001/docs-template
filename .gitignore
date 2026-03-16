@@ -1,0 +1,11 @@
+.vscode
+node_modules/
+.next/
+out/
+.source/
+next-env.d.ts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

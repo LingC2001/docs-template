@@ -1,0 +1,58 @@
+---
+title: Getting Started
+description: How to use this documentation template.
+---
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) 20+
+- [pnpm](https://pnpm.io/)
+
+## Development
+
+Navigate to the `docs/` directory and install dependencies:
+
+```sh
+cd docs
+pnpm install
+```
+
+Start the development server:
+
+```sh
+pnpm dev
+```
+
+Visit `http://localhost:3000` to view your docs locally.
+
+## Adding Content
+
+Create `.mdx` files in `docs/content/docs/` to add new pages. Each file needs frontmatter:
+
+```mdx
+---
+title: My Page Title
+description: A short description of the page.
+---
+
+Your content here using **Markdown** and MDX components.
+```
+
+Update `docs/content/docs/meta.json` to control page ordering in the sidebar.
+
+## Building for Production
+
+```sh
+pnpm build
+```
+
+The static output is generated in `docs/out/`.
+
+## Deployment
+
+This template includes a GitHub Actions workflow that automatically builds and deploys to GitHub Pages on push to `main`. The base path is automatically set to your repository name.
+
+To enable GitHub Pages:
+
+1. Go to your repository **Settings → Pages**
+2. Set **Source** to **GitHub Actions**
