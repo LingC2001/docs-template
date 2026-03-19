@@ -1,0 +1,60 @@
+---
+title: Tabs
+description: Organize content into switchable tabbed panels.
+---
+
+Tabs let users switch between different views of related content.
+
+## Basic Tabs
+
+<Tabs items={["React", "Vue", "Svelte"]}>
+  <Tab value="React">
+    React uses a virtual DOM and JSX syntax for building component-based UIs.
+  </Tab>
+  <Tab value="Vue">
+    Vue uses a template-based syntax with a reactive data system.
+  </Tab>
+  <Tab value="Svelte">
+    Svelte compiles components to efficient imperative code at build time.
+  </Tab>
+</Tabs>
+
+## Tabs with Code
+
+<Tabs items={["npm", "pnpm", "yarn"]}>
+  <Tab value="npm">
+    ```sh
+    npm install my-package
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```sh
+    pnpm add my-package
+    ```
+  </Tab>
+  <Tab value="yarn">
+    ```sh
+    yarn add my-package
+    ```
+  </Tab>
+</Tabs>
+
+## Usage
+
+```mdx
+<Tabs items={["Tab 1", "Tab 2"]}>
+  <Tab value="Tab 1">
+    Content for the first tab.
+  </Tab>
+  <Tab value="Tab 2">
+    Content for the second tab.
+  </Tab>
+</Tabs>
+```
+
+### Props
+
+| Prop            | Type       | Description                             |
+| --------------- | ---------- | --------------------------------------- |
+| `items`         | `string[]` | Tab labels                              |
+| `defaultIndex`  | `number`   | Initially selected tab (default: `0`)   |

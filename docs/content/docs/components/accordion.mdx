@@ -1,0 +1,44 @@
+---
+title: Accordion
+description: Collapsible sections for organizing content.
+---
+
+Accordions let you hide content behind expandable sections, keeping pages clean while still providing detailed information.
+
+## Basic Accordion
+
+<Accordions>
+  <Accordion title="What is Fumadocs?">
+    Fumadocs is a documentation framework built on Next.js. It provides a full-featured documentation site with MDX support, search, and theming.
+  </Accordion>
+  <Accordion title="How do I deploy?">
+    Push to your `main` branch. The included GitHub Actions workflow will automatically build and deploy to GitHub Pages.
+  </Accordion>
+  <Accordion title="Can I customize the theme?">
+    Yes! You can customize colors, fonts, and layout through Tailwind CSS and the Fumadocs theme configuration.
+  </Accordion>
+</Accordions>
+
+## FAQ Style
+
+<Accordions>
+  <Accordion title="Is this free to use?">
+    Yes, this template is open source and free to use for any project.
+  </Accordion>
+  <Accordion title="What file format are docs written in?">
+    Documentation pages are written in MDX — Markdown with JSX component support.
+  </Accordion>
+</Accordions>
+
+## Usage
+
+```mdx
+<Accordions>
+  <Accordion title="Question or section title">
+    Content that is hidden until expanded.
+  </Accordion>
+  <Accordion title="Another section">
+    More hidden content here.
+  </Accordion>
+</Accordions>
+```

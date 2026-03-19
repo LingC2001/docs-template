@@ -1,0 +1,83 @@
+---
+title: Type Table
+description: Document API types and props in a structured table.
+---
+
+The TypeTable component is useful for documenting component props, API parameters, or configuration options.
+
+## Basic Type Table
+
+<TypeTable
+  type={{
+    name: {
+      type: "string",
+      description: "The display name of the item.",
+      required: true,
+    },
+    description: {
+      type: "string",
+      description: "A short description.",
+    },
+    disabled: {
+      type: "boolean",
+      description: "Whether the item is disabled.",
+      default: "false",
+    },
+    variant: {
+      type: "'primary' | 'secondary' | 'ghost'",
+      description: "Visual style variant.",
+      default: "'primary'",
+    },
+  }}
+/>
+
+## Configuration Options
+
+<TypeTable
+  type={{
+    output: {
+      type: "'static' | 'server'",
+      description: "Build output mode.",
+      default: "'static'",
+    },
+    basePath: {
+      type: "string",
+      description: "Base URL path for the site.",
+      default: "''",
+    },
+    theme: {
+      type: "'light' | 'dark' | 'system'",
+      description: "Default color theme.",
+      default: "'system'",
+    },
+  }}
+/>
+
+## Usage
+
+```mdx
+<TypeTable
+  type={{
+    name: {
+      type: "string",
+      description: "The display name.",
+      required: true,
+    },
+    count: {
+      type: "number",
+      description: "Number of items.",
+      default: "0",
+    },
+  }}
+/>
+```
+
+### TypeNode Properties
+
+| Property      | Type      | Description                           |
+| ------------- | --------- | ------------------------------------- |
+| `type`        | `string`  | The type signature                    |
+| `description` | `string`  | Description of the property           |
+| `default`     | `string`  | Default value                         |
+| `required`    | `boolean` | Whether the property is required      |
+| `deprecated`  | `boolean` | Mark as deprecated                    |

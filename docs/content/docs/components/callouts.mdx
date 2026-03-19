@@ -1,0 +1,50 @@
+---
+title: Callouts
+description: Highlight important information with callout boxes.
+---
+
+Callouts draw attention to important notes, warnings, and tips. They are available by default in MDX.
+
+## Types
+
+<Callout type="info" title="Info">
+  This is an informational callout. Use it for general notes and tips.
+</Callout>
+
+<Callout type="warn" title="Warning">
+  This is a warning callout. Use it when users should proceed with caution.
+</Callout>
+
+<Callout type="error" title="Error">
+  This is an error callout. Use it for critical issues or destructive actions.
+</Callout>
+
+## Without Title
+
+<Callout type="info">
+  Callouts work without a title too. Just omit the `title` prop.
+</Callout>
+
+## Usage
+
+```mdx
+<Callout type="info" title="Info">
+  This is an informational callout.
+</Callout>
+
+<Callout type="warn" title="Warning">
+  Proceed with caution.
+</Callout>
+
+<Callout type="error" title="Error">
+  Something went wrong.
+</Callout>
+```
+
+### Available Types
+
+| Type    | Use Case                        |
+| ------- | ------------------------------- |
+| `info`  | General notes and tips          |
+| `warn`  | Caution or potential issues     |
+| `error` | Critical issues or dangers      |

@@ -1,0 +1,49 @@
+---
+title: Cards
+description: Display content in card layouts with optional links and icons.
+---
+
+Cards are great for linking to related pages, showing features, or organizing content into visual groups.
+
+## Basic Cards
+
+<Cards>
+  <Card title="Getting Started" description="Learn how to set up your documentation site." href="/docs/getting-started" />
+  <Card title="Components" description="Explore the available UI components." href="/docs/components/callouts" />
+  <Card title="Deployment" description="Deploy your docs to GitHub Pages." href="/docs/getting-started" />
+</Cards>
+
+## Cards with Icons
+
+<Cards>
+  <Card icon="📦" title="Installation" description="Install dependencies and get running." />
+  <Card icon="🎨" title="Theming" description="Customize colors, fonts, and layout." />
+  <Card icon="🚀" title="Deployment" description="Ship your docs to production." />
+</Cards>
+
+## Usage
+
+```mdx
+<Cards>
+  <Card
+    title="Getting Started"
+    description="Learn how to set up your site."
+    href="/docs/getting-started"
+  />
+  <Card
+    icon="📦"
+    title="Installation"
+    description="Install dependencies."
+  />
+</Cards>
+```
+
+### Props
+
+| Prop          | Type        | Description                          |
+| ------------- | ----------- | ------------------------------------ |
+| `title`       | `ReactNode` | Card heading (required)              |
+| `description` | `string`    | Short description text               |
+| `href`        | `string`    | Link URL — makes the card clickable  |
+| `icon`        | `ReactNode` | Icon displayed beside the title      |
+| `external`    | `boolean`   | Open link in a new tab               |

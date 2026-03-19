@@ -1,0 +1,85 @@
+---
+title: Code Blocks
+description: Syntax-highlighted code with titles, line numbers, and tabs.
+---
+
+Code blocks are rendered with syntax highlighting out of the box.
+
+## Basic Code Block
+
+```python
+def fibonacci(n: int) -> int:
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+```
+
+## With Title
+
+```ts title="utils.ts"
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "");
+}
+```
+
+## With Line Highlighting
+
+```js title="config.js" {3-5}
+const config = {
+  name: "My Docs",
+  // These lines are highlighted
+  theme: "dark",
+  lang: "en",
+  output: "static",
+};
+```
+
+## Multiple Languages with Tabs
+
+<Tabs items={["TypeScript", "Python", "Go"]}>
+  <Tab value="TypeScript">
+    ```ts
+    function greet(name: string): string {
+      return `Hello, ${name}!`;
+    }
+    ```
+  </Tab>
+  <Tab value="Python">
+    ```python
+    def greet(name: str) -> str:
+        return f"Hello, {name}!"
+    ```
+  </Tab>
+  <Tab value="Go">
+    ```go
+    func greet(name string) string {
+        return fmt.Sprintf("Hello, %s!", name)
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Inline Code
+
+Use `backticks` for inline code like `const x = 1` or `pip install`.
+
+## Usage
+
+````mdx
+```python title="example.py" {2}
+def hello():
+    print("Hello, world!")
+```
+````
+
+### Features
+
+| Feature             | Syntax                         |
+| ------------------- | ------------------------------ |
+| Language             | ` ```language `                |
+| Title                | ` ```js title="file.js" `     |
+| Line highlighting    | ` ```js {1,3-5} `             |
+| Inline code          | `` `code` ``                   |

@@ -1,0 +1,51 @@
+---
+title: Steps
+description: Display sequential instructions as numbered steps.
+---
+
+Steps are ideal for tutorials, setup guides, and multi-step workflows.
+
+## Basic Steps
+
+<Steps>
+  <Step>
+    ### Clone the repository
+
+    ```sh
+    git clone https://github.com/your-username/your-repo.git
+    cd your-repo
+    ```
+  </Step>
+  <Step>
+    ### Install dependencies
+
+    ```sh
+    cd docs
+    pnpm install
+    ```
+  </Step>
+  <Step>
+    ### Start the dev server
+
+    ```sh
+    pnpm dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
+  </Step>
+</Steps>
+
+## Usage
+
+```mdx
+<Steps>
+  <Step>
+    ### First Step
+    Description of the first step.
+  </Step>
+  <Step>
+    ### Second Step
+    Description of the second step.
+  </Step>
+</Steps>
+```

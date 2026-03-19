@@ -1,0 +1,50 @@
+---
+title: Tables
+description: Standard Markdown tables for displaying structured data.
+---
+
+Markdown tables work out of the box with styling from Fumadocs.
+
+## Basic Table
+
+| Name       | Type     | Description              |
+| ---------- | -------- | ------------------------ |
+| `title`    | `string` | Page title               |
+| `author`   | `string` | Author name              |
+| `date`     | `string` | Publication date         |
+| `draft`    | `bool`   | Whether this is a draft  |
+
+## Comparison Table
+
+| Feature          | Free Plan | Pro Plan  | Enterprise |
+| ---------------- | :-------: | :-------: | :--------: |
+| Pages            |    10     |    100    | Unlimited  |
+| Custom domain    |    ❌     |    ✅     |     ✅     |
+| Analytics        |    ❌     |    ✅     |     ✅     |
+| Priority support |    ❌     |    ❌     |     ✅     |
+
+## Status Table
+
+| Service     | Status       | Uptime  |
+| ----------- | ------------ | ------- |
+| API         | 🟢 Online    | 99.99%  |
+| Dashboard   | 🟢 Online    | 99.95%  |
+| CDN         | 🟡 Degraded  | 98.50%  |
+| Database    | 🟢 Online    | 99.98%  |
+
+## Usage
+
+```md
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+```
+
+### Alignment
+
+```md
+| Left-aligned | Center-aligned | Right-aligned |
+| :----------- | :------------: | ------------: |
+| Left         |    Center      |         Right |
+```

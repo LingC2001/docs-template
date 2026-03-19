@@ -1,0 +1,14 @@
+{
+  "title": "Components",
+  "pages": [
+    "callouts",
+    "cards",
+    "code-blocks",
+    "tabs",
+    "steps",
+    "accordion",
+    "file-tree",
+    "type-table",
+    "tables"
+  ]
+}
