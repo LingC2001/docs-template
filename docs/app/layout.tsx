@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { Provider } from "@/components/provider";
+import "katex/dist/katex.min.css";
 import "./global.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

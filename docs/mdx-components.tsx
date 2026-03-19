@@ -6,6 +6,7 @@ import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { TypeTable } from "fumadocs-ui/components/type-table";
+import { Mermaid } from "@/components/Mermaid";
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -16,6 +17,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Files,
     Folder,
     ImageZoom,
+    Mermaid,
     Step,
     Steps,
     Tab,

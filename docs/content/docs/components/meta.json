@@ -9,6 +9,8 @@
     "accordion",
     "file-tree",
     "type-table",
-    "tables"
+    "tables",
+    "diagrams",
+    "math"
   ]
 }

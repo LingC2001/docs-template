@@ -1,0 +1,96 @@
+---
+title: Math
+description: Render mathematical equations with LaTeX syntax using KaTeX.
+---
+
+Math expressions are rendered using [KaTeX](https://katex.org/). Use standard LaTeX syntax inline or in display blocks.
+
+## Inline Math
+
+The quadratic formula is $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, which gives the roots of $ax^2 + bx + c = 0$.
+
+Einstein's famous equation $E = mc^2$ relates energy and mass.
+
+## Display Math
+
+The Gaussian integral:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+Euler's identity:
+
+$$
+e^{i\pi} + 1 = 0
+$$
+
+## Matrices
+
+$$
+A = \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$$
+
+## Summations and Products
+
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+$$
+
+$$
+n! = \prod_{k=1}^{n} k
+$$
+
+## Aligned Equations
+
+$$
+\begin{aligned}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \mathbf{B} &= 0 \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+\nabla \times \mathbf{B} &= \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+\end{aligned}
+$$
+
+## Piecewise Functions
+
+$$
+f(x) = \begin{cases}
+x^2 & \text{if } x \geq 0 \\
+-x^2 & \text{if } x < 0
+\end{cases}
+$$
+
+## Big-O Notation
+
+Common time complexities: $O(1)$, $O(\log n)$, $O(n)$, $O(n \log n)$, $O(n^2)$, $O(2^n)$.
+
+The master theorem states that for $T(n) = aT(n/b) + f(n)$:
+
+$$
+T(n) = \Theta(n^{\log_b a})
+$$
+
+when $f(n) = O(n^{\log_b a - \varepsilon})$ for some $\varepsilon > 0$.
+
+## Usage
+
+### Inline
+
+```mdx
+The formula $E = mc^2$ is well known.
+```
+
+### Display Block
+
+```mdx
+$$
+\int_0^1 x^2 \, dx = \frac{1}{3}
+$$
+```
+
+See the [KaTeX supported functions](https://katex.org/docs/supported) for the full list of available LaTeX commands.

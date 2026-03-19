@@ -1,0 +1,105 @@
+---
+title: Diagrams
+description: Render diagrams using Mermaid syntax in code blocks.
+---
+
+Mermaid diagrams render automatically from fenced code blocks with the `mermaid` language tag.
+
+## Flowchart
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+    C --> E[Ship it 🚀]
+```
+
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    participant DB
+
+    User->>Browser: Click button
+    Browser->>Server: POST /api/data
+    Server->>DB: INSERT query
+    DB-->>Server: Success
+    Server-->>Browser: 200 OK
+    Browser-->>User: Show confirmation
+```
+
+## Class Diagram
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +makeSound()
+    }
+    class Dog {
+        +String breed
+        +fetch()
+    }
+    class Cat {
+        +bool indoor
+        +purr()
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+
+## State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Draft
+    Draft --> Review : Submit
+    Review --> Published : Approve
+    Review --> Draft : Request changes
+    Published --> Archived : Archive
+    Archived --> [*]
+```
+
+## Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    USER ||--o{ POST : writes
+    USER ||--o{ COMMENT : writes
+    POST ||--o{ COMMENT : has
+    POST }o--|| CATEGORY : belongs_to
+```
+
+## Git Graph
+
+```mermaid
+gitGraph
+    commit
+    commit
+    branch feature
+    checkout feature
+    commit
+    commit
+    checkout main
+    merge feature
+    commit
+```
+
+## Usage
+
+Write a fenced code block with the `mermaid` language identifier:
+
+````mdx
+```mermaid
+flowchart LR
+    A --> B --> C
+```
+````
+
+See the [Mermaid documentation](https://mermaid.js.org/intro/) for all supported diagram types and syntax.
